@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -63,16 +64,16 @@ const NavBar = () => {
             className="menu menu-sm dropdown-content mt-3 w-52 rounded-box bg-base-100 p-2 shadow z-50"
           >
             <li>
-              <a className="justify-between">
+              <Link to = "/profile" className="justify-between">
                 Profile
                 <span className="badge badge-primary">New</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a>Settings</a>
             </li>
             <li>
-              <a>Logout</a>
+              <Link to = "/login">Logout</Link>
             </li>
           </ul>
         </div>)}
