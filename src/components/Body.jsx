@@ -13,29 +13,34 @@ const Body = () => {
   const userData = useSelector((store) => store.user);
 
   const fetchUser = async () => {
-    if(userData) return; 
+    if (userData) return;
     try {
-      const res = await axios.get(BASE_URL + "/profile/view", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        BASE_URL + "/profile/view",
+        {
+          withCredentials: true,
+        }
+      );
 
       dispatch(addUser(res.data));
     } catch (err) {
-      if(err.status === 401){
+      if (err.status === 401) {
         navigate("/login");
       }
       console.error(err);
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     fetchUser();
   }, []);
 
   return (
     <div>
       <NavBar />
-      <Outlet />
+      <div className="pt-16">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

@@ -10,6 +10,7 @@ import { BASE_URL } from "../utils/constants";
 const Login = () => {
   const [emailId, setEmailId] = useState("anurag1234@gmail.com");
   const [password, setPassword] = useState("Anurag@123");
+  const [error, setError] = useState("");
 
   const dispatch = useDispatch();
    const navigate = useNavigate();
@@ -25,7 +26,7 @@ const Login = () => {
       return navigate("/");
       
     } catch (err) {
-      console.error(err);
+      setError(err?.response?.data || "Something went wrong");
     }
   };
 
@@ -65,7 +66,7 @@ const Login = () => {
                 className="input w-full focus:border-primary/50 focus:ring-0 focus:outline-none"
               />
             </div>
-
+                <p className="text-red-500">{error}</p>
             <button
               className="btn btn-primary w-full mt-6"
               onClick={handleLogin}
