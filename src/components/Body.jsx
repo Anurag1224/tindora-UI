@@ -36,9 +36,9 @@ const Body = () => {
   }, []);
 
   return (
-    <div>
+    <div >
       <NavBar />
-      <div className="pt-16">
+      <div className=""> 
         <Outlet />
       </div>
       <Footer />
