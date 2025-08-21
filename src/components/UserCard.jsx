@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const UserCard = ({ user}, {showActions = true}, {noMargin = false  }) => {
+const UserCard = ({ user={}, showActions = true, noMargin = false  }) => {
   const { firstName, lastName, photoUrl = [], age, gender, about, skills = [] } = user;
 
   const [current, setCurrent] = useState(0);
@@ -13,6 +13,14 @@ const UserCard = ({ user}, {showActions = true}, {noMargin = false  }) => {
     setCurrent((prev) => (prev - 1 + photoUrl.length) % photoUrl.length);
   };
 
+  if(!user) {
+    return (
+    <div className="flex justify-center items-center h-full">
+      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+    </div>
+  );
+  }
+  
   return (
     <div className={noMargin? "w-[350px] md:w-[400px] bg-base-100 dark:bg-gray-800 shadow-xl text-white rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 mt-0 h-[510px]": "w-[350px] md:w-[400px] bg-base-100 shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 mt-24"}>
       {/* Image Section */}

@@ -38,7 +38,7 @@ const Body = () => {
   return (
     <div >
       <NavBar />
-      <div className=""> 
+      <div> 
         <Outlet />
       </div>
       <Footer />

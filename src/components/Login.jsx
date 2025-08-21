@@ -82,17 +82,17 @@ const Login = () => {
             </div>
 
             {/* Divider */}
-            <div className="divider">OR</div>
+            {/* <div className="divider">OR</div> */}
 
             {/* Social Login */}
-            <div className="flex justify-center gap-4">
+            {/* <div className="flex justify-center gap-4">
               <button className="btn btn-outline flex items-center gap-2">
                 <FaGoogle /> Google
               </button>
               <button className="btn btn-outline flex items-center gap-2">
                 <FaGithub /> GitHub
               </button>
-            </div>
+            </div> */}
 
             {/* Sign Up */}
             <p className="text-center mt-6 text-sm">

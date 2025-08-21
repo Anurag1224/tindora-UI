@@ -70,10 +70,10 @@ const NavBar = () => {
             className="btn btn-ghost btn-circle avatar focus:outline-none focus:ring-2 focus:ring-primary/40"
           >
             <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-              <img
-                alt="User avatar"
-                src={user.photoUrl}
-              />
+              {user.photoUrl&&(<img
+                alt="https://i.pinimg.com/736x/03/eb/d6/03ebd625cc0b9d636256ecc44c0ea324.jpg"
+                src={user.photoUrl[0]}
+              />)}
             </div>
           </div>
           <ul
@@ -87,7 +87,10 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <a>Settings</a>
+              <Link to = "/connections">My Connections</Link>
+            </li>
+            <li>
+              <Link to = "/requests">New Requests</Link>
             </li>
             <li>
               <Link onClick={handleLogout}>Logout</Link>
