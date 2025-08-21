@@ -21,7 +21,7 @@ const Body = () => {
           withCredentials: true,
         }
       );
-
+      
       dispatch(addUser(res.data));
     } catch (err) {
       if (err.status === 401) {

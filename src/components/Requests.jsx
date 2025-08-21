@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequests, removeRequest } from "../utils/requesrSlice";
@@ -9,10 +9,9 @@ import { FaCheck, FaTimes } from "react-icons/fa";
 const Requests = () => {
   const requests = useSelector((store) => store.requests);
   const dispatch = useDispatch();
-  const [showButton, setShowButton] = useState(true);
 
   const reviewRequest = async (status, _id) => {
-
+ 
     try {
       const res = await axios.post(
         BASE_URL + "/request/review/" + status + "/" + _id,
@@ -41,11 +40,10 @@ const Requests = () => {
   }, []);
 
   if (!requests || requests.length === 0)
-    return (<div className="flex items-center justify-center h-screen">
-  <div className="w-3/4 sm:w-1/2 md:w-1/3 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 text-center transition hover:shadow-lg">
-    <p className="text-xl font-semibold text-white"> No Pending Request</p>
-  </div>
-</div>
+    return (
+      <div className="mt-24 flex justify-center">
+        <h1 className="text-lg font-semibold">No pending requests</h1>
+      </div>
 );
 
   return (

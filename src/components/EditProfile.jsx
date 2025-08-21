@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const EditProfile = ({ user }) => {
+ 
   const [firstName, setFirstName] = useState(user.firstName || "");
   const [lastName, setLastName] = useState(user.lastName || "");
   const [age, setAge] = useState(user.age || "");
@@ -79,6 +80,12 @@ const EditProfile = ({ user }) => {
       setError(err?.response?.data?.error);
     }
   };
+
+  if (!user) return (
+    <div className="flex justify-center items-center h-full">
+      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent border-solid rounded-full animate-spin"></div>
+    </div>
+  );
 
   return (
     <>
