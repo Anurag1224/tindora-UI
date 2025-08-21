@@ -1,13 +1,29 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { addRequests } from "../utils/requesrSlice";
+import { addRequests, removeRequest } from "../utils/requesrSlice";
 import { FaCheck, FaTimes } from "react-icons/fa";
+
 
 const Requests = () => {
   const requests = useSelector((store) => store.requests);
   const dispatch = useDispatch();
+  const [showButton, setShowButton] = useState(true);
+
+  const reviewRequest = async (status, _id) => {
+
+    try {
+      const res = await axios.post(
+        BASE_URL + "/request/review/" + status + "/" + _id,
+        {},
+        { withCredentials: true }
+      );
+      dispatch(removeRequest(_id))
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const fetchRequests = async () => {
     try {
@@ -25,7 +41,12 @@ const Requests = () => {
   }, []);
 
   if (!requests || requests.length === 0)
-    return <div className="mt-24">No Pending Request</div>;
+    return (<div className="flex items-center justify-center h-screen">
+  <div className="w-3/4 sm:w-1/2 md:w-1/3 bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 text-center transition hover:shadow-lg">
+    <p className="text-xl font-semibold text-white"> No Pending Request</p>
+  </div>
+</div>
+);
 
   return (
     <div className="mt-24">
@@ -51,7 +72,8 @@ const Requests = () => {
 
               <div className="flex flex-col ml-4">
                 <h2 className="text-lg font-semibold dark:text-white">
-                  {request?.fromUserId?.firstName} {request?.fromUserId?.lastName},{" "}
+                  {request?.fromUserId?.firstName}{" "}
+                  {request?.fromUserId?.lastName},{" "}
                   <span className="font-normal text-[16px] text-pink-400">
                     {request?.fromUserId?.age}{" "}
                     {request?.fromUserId?.gender === "female"
@@ -63,11 +85,9 @@ const Requests = () => {
                 </h2>
 
                 <p className="text-xs dark:text-gray-300 text-justify mt-1">
-                  {request?.fromUserId?.about ||
-                    "No bio available"}
+                  {request?.fromUserId?.about || "No bio available"}
                 </p>
 
-                
                 <div className="flex flex-wrap gap-2 mt-2">
                   {request?.fromUserId?.skills?.length > 0 ? (
                     request.fromUserId.skills.map((skill, i) => (
@@ -87,12 +107,17 @@ const Requests = () => {
               </div>
             </div>
 
-            
             <div className="flex flex-wrap gap-4">
-              <button className="p-2 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-md">
+              <button
+                className="p-2 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-md"
+                onClick={() => reviewRequest("accepted", request._id)}
+              >
                 <FaCheck />
               </button>
-              <button className="p-2 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-md">
+              <button
+                className="p-2 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-md"
+                onClick={() => reviewRequest("rejected", request._id)}
+              >
                 <FaTimes />
               </button>
             </div>
