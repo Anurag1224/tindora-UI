@@ -25,12 +25,18 @@ const Feed = () => {
     getFeed();
   }, []);
 
-  if (!feed || feed.length === 0)
+  if (!feed || feed.length <= 0)
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex flex-col items-center justify-center h-screen">
         <h1 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-          No feed to show
+          No new users found
         </h1>
+        <p
+          className="text-sm my-2 text-center animate-blink 
+               text-blue-600 dark:text-blue-400"
+        >
+          Try after some time
+        </p>
       </div>
     );
   return (
