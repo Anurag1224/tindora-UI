@@ -8,15 +8,16 @@ import { addUser } from "../utils/userSlice";
 
 const EditProfile = ({ user }) => {
  
-  const [firstName, setFirstName] = useState(user.firstName || "");
-  const [lastName, setLastName] = useState(user.lastName || "");
-  const [age, setAge] = useState(user.age || "");
-  const [gender, setGender] = useState(user.gender || "");
-  const [skills, setSkills] = useState(user.skills || []);
+
+  const [firstName, setFirstName] = useState(user?.firstName || "");
+  const [lastName, setLastName] = useState(user?.lastName || "");
+  const [age, setAge] = useState(user?.age || "");
+  const [gender, setGender] = useState(user?.gender || "");
+  const [skills, setSkills] = useState(user?.skills || []);
   const [skillInput, setSkillInput] = useState("");
-  const [photoUrl, setPhotoUrl] = useState(user.photoUrl || []);
+  const [photoUrl, setPhotoUrl] = useState(user?.photoUrl || []);
   const [photoInput, setPhotoInput] = useState("");
-  const [about, setAbout] = useState(user.about || "");
+  const [about, setAbout] = useState(user?.about || "");
   const [error, setError] = useState("");
   const [showToast, setShowToast] = useState(false);
 
@@ -72,8 +73,8 @@ const EditProfile = ({ user }) => {
         },
         { withCredentials: true }
       );
-
-      dispatch(addUser(res?.data?.data));
+      
+      dispatch(addUser(res?.data));
       setShowToast(true);
       setTimeout(() => {setShowToast(false)},2000);
     } catch (err) {

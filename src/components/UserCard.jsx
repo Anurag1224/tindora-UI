@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { removeUserFromFeed } from "../utils/feedSlice";
 
-const UserCard = ({ user = {}, showActions = true, noMargin = false }) => {
+const UserCard = ({ user, showActions = true, noMargin = false }) => {
   const {
     firstName,
     lastName,

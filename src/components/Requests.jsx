@@ -115,6 +115,7 @@ const Requests = () => {
               <button
                 className="p-2 bg-red-500 hover:bg-red-600 text-white rounded-full shadow-md"
                 onClick={() => reviewRequest("rejected", request._id)}
+                
               >
                 <FaTimes />
               </button>
