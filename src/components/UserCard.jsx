@@ -28,13 +28,14 @@ const UserCard = ({ user, showActions = true, noMargin = false }) => {
   };
 
   const handleSendRequest = async (status, userId) => {
+  
     try {
       const res = await axios.post(
         BASE_URL + "/request/send/" + status + "/" + userId,
         {},
         { withCredentials: true }
       );
-
+      
       dispatch(removeUserFromFeed(userId));
     } catch (err) {
       console.log(err);
