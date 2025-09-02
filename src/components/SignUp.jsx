@@ -124,7 +124,7 @@ const SignUp = () => {
 
             {/* <p className="text-center mt-6 text-sm">
               Have an account?
-              <Link href="/login" className="link link-primary">
+              <Link href="/login"  className="link link-primary">
                 Login
               </Link>
             </p> */}

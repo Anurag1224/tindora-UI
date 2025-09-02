@@ -64,12 +64,14 @@ const Login = () => {
                 }}
                 placeholder="Enter your password"
                 className="input w-full focus:border-primary/50 focus:ring-0 focus:outline-none"
+                onKeyDown={(e) => e.key === "Enter" && handleLogin()}
               />
             </div>
                 <p className="text-red-500">{error}</p>
             <button
               className="btn btn-primary w-full mt-6"
               onClick={handleLogin}
+              
             >
               Login
             </button>

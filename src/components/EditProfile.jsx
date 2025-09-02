@@ -90,12 +90,12 @@ const EditProfile = ({ user }) => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col bg-base-200 dark:bg-gray-900 transition-colors">
+      <div className="min-h-screen flex flex-col bg-base-200 transition-colors">
         <div className="flex flex-grow items-center justify-center px-4 py-10">
           <div className="flex flex-wrap gap-10">
-            <div className="card w-full max-w-4xl bg-base-100 dark:bg-gray-800 shadow-xl p-6">
+            <div className="card w-full max-w-4xl bg-base-100 shadow-xl p-6">
               <div className="card-body">
-                <h2 className="card-title justify-center text-2xl font-bold text-gray-900 dark:text-gray-100">
+                <h2 className="card-title justify-center text-2xl font-bold">
                   Edit Profile
                 </h2>
 
@@ -104,7 +104,7 @@ const EditProfile = ({ user }) => {
                     <div className="flex flex-col md:flex-row gap-4">
                       <div className="form-control flex-1">
                         <label className="label">
-                          <span className="label-text dark:text-gray-200">
+                          <span className="label-text">
                             First Name
                           </span>
                         </label>
@@ -119,7 +119,7 @@ const EditProfile = ({ user }) => {
 
                       <div className="form-control flex-1">
                         <label className="label">
-                          <span className="label-text dark:text-gray-200">
+                          <span className="label-text">
                             Last Name
                           </span>
                         </label>
@@ -136,7 +136,7 @@ const EditProfile = ({ user }) => {
                     <div className="flex flex-col md:flex-row gap-4">
                       <div className="form-control flex-1">
                         <label className="label">
-                          <span className="label-text dark:text-gray-200">
+                          <span className="label-text">
                             Gender
                           </span>
                         </label>
@@ -156,7 +156,7 @@ const EditProfile = ({ user }) => {
 
                       <div className="form-control flex-1">
                         <label className="label">
-                          <span className="label-text dark:text-gray-200">
+                          <span className="label-text">
                             Age
                           </span>
                         </label>
@@ -172,7 +172,7 @@ const EditProfile = ({ user }) => {
 
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text dark:text-gray-200">
+                        <span className="label-text">
                           About
                         </span>
                       </label>
@@ -189,7 +189,7 @@ const EditProfile = ({ user }) => {
                   <div className="flex flex-col gap-4">
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text dark:text-gray-200">
+                        <span className="label-text">
                           Photos (Max 3)
                         </span>
                       </label>
@@ -226,7 +226,7 @@ const EditProfile = ({ user }) => {
 
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text dark:text-gray-200">
+                        <span className="label-text">
                           Skills
                         </span>
                       </label>

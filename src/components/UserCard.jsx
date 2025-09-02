@@ -54,7 +54,7 @@ const UserCard = ({ user, showActions = true, noMargin = false }) => {
     <div
       className={
         noMargin
-          ? "w-[350px] md:w-[400px] bg-base-100 dark:bg-gray-800 shadow-xl text-white rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 mt-0 h-[510px]"
+          ? "w-[350px] md:w-[400px] bg-base-100 shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 mt-0 h-[510px]"
           : "w-[350px] md:w-[400px] bg-base-100 shadow-xl rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-300 mt-24"
       }
     >
