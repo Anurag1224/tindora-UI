@@ -92,8 +92,8 @@ const EditProfile = ({ user }) => {
     <>
       <div className="min-h-screen flex flex-col bg-base-200 transition-colors">
         <div className="flex flex-grow items-center justify-center px-4 py-10">
-          <div className="flex flex-wrap gap-10">
-            <div className="card w-full max-w-4xl bg-base-100 shadow-xl p-6">
+          <div className="flex flex-wrap gap-10 ">
+            <div className="card w-full max-w-4xl bg-base-100 shadow-xl p-6 ">
               <div className="card-body">
                 <h2 className="card-title justify-center text-2xl font-bold">
                   Edit Profile
@@ -275,7 +275,7 @@ const EditProfile = ({ user }) => {
                 </button>
               </div>
             </div>
-            <div className="">
+            <div className="pb-16 md:pb-0 w-full sm:w-auto justify-center flex">
               <UserCard user={user} showActions={false} noMargin />
             </div>
           </div>

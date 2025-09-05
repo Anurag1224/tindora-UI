@@ -51,7 +51,7 @@ const Requests = () => {
       </h1>
 
       {/* Scrollable Container  */}
-      <div className="flex flex-col gap-4 w-full items-center max-h-[80vh] overflow-y-auto no-scrollbar pb-16">
+      <div className="flex flex-col gap-4 w-full items-center max-h-[80vh] overflow-y-auto no-scrollbar pb-20">
         {requests.map((request) => (
           <div
             key={request._id}

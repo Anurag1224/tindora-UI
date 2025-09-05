@@ -82,9 +82,9 @@ const Chat = () => {
   }, [messages]);
 
   return (
-    <div className="flex justify-center items-center w-full mt-20">
-      <div className="card w-full md:w-1/2 h-[80vh] shadow-xl border rounded-2xl overflow-hidden flex flex-col">
-        <div className="flex items-center gap-3 p-4 border-b bg-base-200">
+    <div className="flex justify-center items-center w-full mt-16 sm:mt-20 mb-20 sm:mb-0 ">
+      <div className="card w-full md:w-1/2 h-[80vh] shadow-xl sm:border sm:rounded-2xl overflow-hidden flex flex-col">
+        <div className=" hidden sm:flex items-center h-[20px] sm:h-auto p-4 border-b bg-base-200">
           <h2 className="font-semibold text-lg">Chat</h2>
         </div>
 
