@@ -41,7 +41,7 @@ const Connections = () => {
       </h1>
 
       <div
-        className="flex flex-col gap-4 w-full sm:w-3/4 lg:w-1/2 items-center overflow-y-auto no-scrollbar pb-4"
+        className="flex flex-col gap-4 w-full sm:w-3/4 lg:w-1/2 items-center overflow-y-auto no-scrollbar pb-16"
         style={{ maxHeight: "70vh" }}
       >
         {connections.map((connection) => (

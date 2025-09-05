@@ -42,7 +42,7 @@ const Body = () => {
       <div> 
         <Outlet />
       </div>
-      <Footer />
+      <Footer user= {userData}/>
     </div>
   );
 };

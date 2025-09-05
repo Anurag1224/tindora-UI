@@ -11,7 +11,7 @@ const NavBar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   // Apply theme to <html>
   useEffect(() => {
@@ -21,7 +21,7 @@ const NavBar = () => {
 
   // Toggle theme
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   const handleLogout = async () => {
@@ -58,7 +58,6 @@ const NavBar = () => {
           )}
         </button>
 
-        {/* Avatar Dropdown */}
         {user && (
           <div className="dropdown dropdown-end">
             <div
@@ -90,6 +89,9 @@ const NavBar = () => {
                   Profile
                   <span className="badge badge-primary">New</span>
                 </Link>
+              </li>
+              <li>
+                <Link to={"/"}>My Feed</Link>
               </li>
               <li>
                 <Link to="/connections">My Connections</Link>

@@ -1,14 +1,19 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-const Footer = () => {
+const Footer = ({user}) => {
   return (
     <div className="fixed bottom-0 w-full">
-      <footer className="bg-base-300 text-center p-4 flex flex-col sm:flex-row items-center justify-between">
-        {/* Copyright */}
+      <footer className="bg-base-300 text-center p-4 flex flex-col sm:flex-row items-center justify-between relative overflow-hidden">
+        
         <p className="text-sm">© 2025 Tindora. All rights reserved.</p>
 
-        {/* Social Media Icons */}
+        {user && (<div className="absolute left-1/2 transform -translate-x-1/2 w-full overflow-hidden">
+          <span className="disclaimer-text">
+            ⚠️ Disclaimer: All photos are taken from Pinterest for demonstration purposes only ⚠️
+          </span>
+        </div>)}
+
         <div className="flex gap-5 mt-2 sm:mt-0 text-lg">
           <a
             href="https://facebook.com"

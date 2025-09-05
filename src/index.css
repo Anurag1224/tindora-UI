@@ -17,3 +17,20 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none; 
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.disclaimer-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 12s linear infinite;
+  color: #6b7280; /* Tailwind gray-500 */
+  font-size: 0.875rem; /* text-sm */
+}
