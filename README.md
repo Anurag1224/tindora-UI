@@ -62,40 +62,39 @@ The application works in conjunction with a backend service (REST API + WebSocke
 ---
 
 ## Project Structure
-```text
-├── public
-│   └── heart.png
-├── src
-│   ├── components
-│   │   ├── Body.jsx
-│   │   ├── Chat.jsx
-│   │   ├── Connections.jsx
-│   │   ├── EditProfile.jsx
-│   │   ├── Feed.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Login.jsx
-│   │   ├── NavBar.jsx
-│   │   ├── Profile.jsx
-│   │   ├── Requests.jsx
-│   │   └── SignUp.jsx
-│   ├── utils
-│   │   ├── appStore.js
-│   │   ├── connectionSlice.js
-│   │   ├── constants.js
-│   │   ├── feedSlice.js
-│   │   ├── requesrSlice.js
-│   │   ├── socket.js
-│   │   └── userSlice.js
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── vite.config.js
-├── eslint.config.js
-├── package.json
-└── .gitignore
-
-
+   ```
+   ├── public
+   │   └── heart.png
+   ├── src
+   │   ├── components
+   │   │   ├── Body.jsx
+   │   │   ├── Chat.jsx
+   │   │   ├── Connections.jsx
+   │   │   ├── EditProfile.jsx
+   │   │   ├── Feed.jsx
+   │   │   ├── Footer.jsx
+   │   │   ├── Login.jsx
+   │   │   ├── NavBar.jsx
+   │   │   ├── Profile.jsx
+   │   │   ├── Requests.jsx
+   │   │   └── SignUp.jsx
+   │   ├── utils
+   │   │   ├── appStore.js
+   │   │   ├── connectionSlice.js
+   │   │   ├── constants.js
+   │   │   ├── feedSlice.js
+   │   │   ├── requesrSlice.js
+   │   │   ├── socket.js
+   │   │   └── userSlice.js
+   │   ├── App.jsx
+   │   ├── index.css
+   │   └── main.jsx
+   ├── index.html
+   ├── vite.config.js
+   ├── eslint.config.js
+   ├── package.json
+   └── .gitignore
+```
 Here are some key parts:
 
 ### 📁 Directory & File Structure
