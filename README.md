@@ -1,6 +1,6 @@
 # Tindora UI
 
-Live Demo: [miraclestreet.co.in](https://miraclestreet.co.in)  
+Live Demo: [miraclestreet.co.in](https://miraclestreet.co.in/)  
 
 A React + Vite powered frontend for **Tindora** — a real‑time social / connection / chat platform.
 
