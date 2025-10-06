@@ -62,7 +62,7 @@ The application works in conjunction with a backend service (REST API + WebSocke
 ---
 
 ## Project Structure
-.
+```text
 ├── public
 │   └── heart.png
 ├── src
