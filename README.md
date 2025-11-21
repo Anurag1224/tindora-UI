@@ -1,6 +1,6 @@
 # Tindora UI
 
-Live Demo: [Live](http://56.228.35.105/login)
+Live Demo: [Click Here](http://56.228.35.105/login)
 
 A React + Vite powered frontend for **Tindora** — a real‑time social / connection / chat platform.
 
